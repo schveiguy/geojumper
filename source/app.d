@@ -1,6 +1,15 @@
 import std.stdio;
+import raylib;
 
 void main()
 {
-	writeln("Edit source/app.d to start your project.");
+    validateRaylibBinding();
+    InitWindow(1000, 800, "Geo Jumper");
+    while(!WindowShouldClose())
+    {
+        BeginDrawing();
+        ClearBackground(Colors.BLACK);
+        EndDrawing();
+    }
+    CloseWindow();
 }
